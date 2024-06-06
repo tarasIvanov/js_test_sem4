@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <ul id="userList">
+        <li>Тарас Іванов 1</li>
+        <li>Тарас Іванов 2</li>
+        <li>Тарас Іванов 3</li>
+        <li>Тарас Іванов 4</li>
+        <li>Тарас Іванов 5</li>
+    </ul>
+
+    <script>
+        const userList = document.getElementById('userList');
+        userList.addEventListener('click', function(event) {
+            if (event.target.tagName === 'LI') {
+                const userName = event.target.textContent;
+                alert(`Hello, ${userName}`);
+            }
+        });
+    </script>
+</body>
+</html>

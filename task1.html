@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <script>
+    // Завдання 1
+    function findMiddleCharacter() {
+        let word = prompt("Enter a word:");
+
+        if (word === null) {
+            alert("Canceled.");
+            return;
+        }
+
+        word = word.trim();
+
+        if (word === "") {
+            alert("Invalid value");
+            return;
+        }
+
+        let length = word.length;
+        let middleIndex = Math.floor(length / 2);
+
+        if (length % 2 === 0) {
+            alert(word[middleIndex - 1] + word[middleIndex]);
+        } else {
+            alert(word[middleIndex]);
+        }
+    }
+
+    findMiddleCharacter();
+    </script>
+</body>
+</html>
